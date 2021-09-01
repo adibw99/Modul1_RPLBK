@@ -8,14 +8,13 @@ function q2() {
 q2();
 console.log('ini root scope: ' + a);
 
-// switch(kondisi) {
-//     case “<pilihan1>”:
-//     // kode program jika pilihan1
-//     break;
-//     case “<pilihan2>”:
-//     // kode program jika pilihan2
-//     break;
-//     default:
-//     // kode program jika tidak ada pilihan
+var angka = [1, 2, 3];
+var dobel = angka.map(function (num) {
+  return num * 2;
+});
+console.log(angka);
+console.log(dobel);
 
-//     }
+const myArray = [5, 10, 20];
+const reducer = myArray.reduce((acumulator, currentValue) => acumulator + currentValue, (initialValue = 0));
+console.log(reducer);
