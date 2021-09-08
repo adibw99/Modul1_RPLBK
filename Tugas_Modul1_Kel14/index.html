@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas RPLBK Modul 1</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src =""></script>
+</head>
+<body>  
+  <center>
+    <h1>Cek Angka Kelipatan 7</h1>
+    <br><br>
+    <form id="form" name="form" onsubmit="return false">
+      <input type="text" class="input" id="masukan" name="masukan">
+      <input type="submit" class="tampil" value="Hasil" onclick="tampilkan()">
+    </form>
+    <br>
+    <p id="review"></p>
+    <h3 id="hasil"></h3>
+    <br><br><br>
+    <p id=>Angka yang dimasukkan sebelumnya :</p>
+    <p id ="sebelum"></p>
+  </center>  
+</body>
+</html>
+
+<script>
+  var masukkans =[];
+  const tampilkan = ()=>{
+    var angka=document.getElementById("form").masukan.value;
+    var hasil=document.getElementById("hasil"); 
+    review.innerHTML = `Angka yang kamu masukkan adalah ${angka}`;
+
+    (angka%7==0)?hasil.innerHTML= `Merupakan kelipatan 7`:
+    hasil.innerHTML= `Bukan termasuk kelipatan 7`;
+    
+    masukkans.push(angka);
+    angkaSebelum();   
+  }
+
+  const angkaSebelum =()=>{
+      var a = '';
+      masukkans.forEach((masukkan)=>{
+          a +=  masukkan+', ';
+      });
+      
+      var tampil = document.getElementById('sebelum');
+      tampil.innerHTML = a;  
+  }
+</script>
